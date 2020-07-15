@@ -6,7 +6,8 @@ module.exports = async (context, { owner, repo, tailDate }) => {
     context.github.issues.listForRepo({
       owner,
       repo,
-      state: 'all',
+      state: 'open',
+      label:severity:high label:severity:critical
       since: tailDate,
       per_page: 100,
     }),
